@@ -20,6 +20,7 @@ class SpressGzipStatic implements PluginInterface
      */
     public function initialize(EventSubscriber $subscriber)
     {
+        $subscriber->addEventListener('spress.start', 'onStart');
     }
 
     /**
@@ -35,5 +36,18 @@ class SpressGzipStatic implements PluginInterface
             'author'      => 'Ghislain PHU',
             'license'     => 'MIT',
         ];
+    }
+
+    /**
+     * Extract configuration and override the default DataWriter on startup
+     *
+     * @param EnvironmentEvent $event The start event
+     */
+    public function onStart(EnvironmentEvent $event)
+    {
+        $configValues = $event->getConfigValues();
+        $configuration = new Configuration($configValues);
+
+        $event->setConfigValues($configuration->get());
     }
 }
