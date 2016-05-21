@@ -1,0 +1,28 @@
+{
+    "name": "ghislainphu/spress-gzip-static",
+    "type": "spress-plugin",
+    "description": "Creates a gzipped version of your Spress compiled files.",
+    "keywords": [
+        "spress",
+        "plugin",
+        "gzip"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ghislain PHU",
+            "email": "contact@ghislainphu.fr"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "GhislainPhu\\Spress\\Plugin\\GzipStatic\\": "src/"
+        }
+    },
+    "require": {
+        "spress/spress-installer": "2.0.*"
+    },
+    "extra": {
+        "spress_class": "GhislainPhu\\Spress\\Plugin\\GzipStatic\\SpressGzipStatic"
+    }
+}
