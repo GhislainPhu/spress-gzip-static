@@ -49,5 +49,6 @@ class SpressGzipStatic implements PluginInterface
         $configuration = new Configuration($configValues);
 
         $event->setConfigValues($configuration->get());
+        $event->setDataWriter(new FilesystemDataWriter($event->getDataWriter(), $configuration));
     }
 }
