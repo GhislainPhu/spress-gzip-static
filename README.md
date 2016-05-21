@@ -8,18 +8,10 @@ This plugin is intended to be used in conjunction with NGINX's [gzip_static](htt
 
 ## Getting Started
 
-Add the following lines to your `composer.json` and run `composer update`:
+Run:
 
-```json
-"repositories": [
-    {
-        "type": "vcs",
-        "url": "https://github.com/GhislainPhu/spress-gzip-static"
-    }
-],
-"require": {
-    "ghislainphu/spress-gzip-static": "dev-master"
-}
+```shell
+composer require ghislainphu/spress-gzip-static
 ```
 
 Add these lines to your `config.yml`:
